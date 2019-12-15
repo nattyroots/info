@@ -16,3 +16,28 @@ sudo service mongod stop
 sudo service mongod restart
 sudo service mongod status
 /var/log/mongodb/mongod.log
+
+Remove Data Directories.
+Remove MongoDB databases and log files.
+    sudo rm -r /var/log/mongodb
+    sudo rm -r /var/lib/mongodb
+
+
+
+---------------
+create db 
+use db-name (will create db if its not exists, or connect it if its exists)
+show dbs
+db 
+db.createCollection()
+------------
+use products
+db.createUser(
+   {
+     user: "emaily-user",
+     pwd: passwordPrompt(),  // Or  "<cleartext password>"
+     roles: [ "readWrite", "dbAdmin" ]
+   }
+)
+---------------
+var mydb = connect('localhost:27017/emaily-dev')
