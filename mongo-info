@@ -41,3 +41,6 @@ db.createUser(
 )
 ---------------
 var mydb = connect('localhost:27017/emaily-dev')
+https://docs.mongodb.com/manual/reference/connection-string/
+mongodb://localhost:27017/emaily-dev
+mongodb://emaily-user:password@localhost:27017/emaily-dev
