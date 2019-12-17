@@ -1,0 +1,5 @@
+I have installed the nodejs from ubuntu software manager (its posible to choose the version there)
+
+sudo apt-get purge nodejs
+sudo apt-get purge --auto-remove nodejs
+

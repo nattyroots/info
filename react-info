@@ -7,5 +7,9 @@ create-react-app client
 
 Just do this:
 npx create-react-app client
+
+
 Official docs on CRA usage with npx are available here:
 https://create-react-app.dev/docs/getting-started#quick-start
+
+

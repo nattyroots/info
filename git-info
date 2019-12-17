@@ -1,0 +1,9 @@
+If you accidentally did
+git rm -rf .
+and removed all, you can recover it doing this.
+
+git status
+git reset HEAD .
+git checkout -- .
+git rm -rf .
+
