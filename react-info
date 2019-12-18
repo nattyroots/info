@@ -13,3 +13,10 @@ Official docs on CRA usage with npx are available here:
 https://create-react-app.dev/docs/getting-started#quick-start
 
 
+
+-------------
+creating the APP:
+1. will have 2 root files:
+    index.js - initial bootup logic for react and Redux = data layer control(Redux)
+    App.js - rendering layer control  - React layr, React router
+    
