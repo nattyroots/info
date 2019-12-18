@@ -15,8 +15,19 @@ https://create-react-app.dev/docs/getting-started#quick-start
 
 
 -------------
+npm install --save redux react-redux react-router-dom
+
 creating the APP:
 1. will have 2 root files:
     index.js - initial bootup logic for react and Redux = data layer control(Redux)
     App.js - rendering layer control  - React layr, React router
-    
+
+naming:
+name with capital (i.e App.js): if giving file exporting Class or React component
+name with lowercase (i.e index.js) if giving file returns just a function or functions
+
+-------------
+in front end we can use "import" statement because we use "webpack and buble"
+witch gives us acess to es2015 modules
+
+on backend we use nodejs witch has acess to nodejs that uses "require" syntacs
