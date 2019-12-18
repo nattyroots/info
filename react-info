@@ -31,3 +31,14 @@ in front end we can use "import" statement because we use "webpack and buble"
 witch gives us acess to es2015 modules
 
 on backend we use nodejs witch has acess to nodejs that uses "require" syntacs
+
+Provider is the "glue" between React and Redux so they can work nicely
+because the Provider is at the very root every component can acess the store 
+
+in Reac/Redux there is a convention to call to file index.js so it will automatically 
+be imported(?)
+
+BrowserRouter -   brains of react router, it changes the  set of components according to url
+Route - is react component sets the rule between sertain route and set of components that is visible on the page
+
+webpack - module loader, packs all project files and creates only several files (one or more)
