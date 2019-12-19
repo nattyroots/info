@@ -1,0 +1,10 @@
+with common js modules, in node js like:
+    module.exports = require('something');
+its allowed to run logic before the export, ie
+    if(true){
+        module.exports = require('somthing');
+    }
+
+-------------
+es 2015 modules (like in client side react) does not allows that before import layer
+    import some from 'somethere'
