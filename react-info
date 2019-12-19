@@ -42,3 +42,11 @@ BrowserRouter -   brains of react router, it changes the  set of components acco
 Route - is react component sets the rule between sertain route and set of components that is visible on the page
 
 webpack - module loader, packs all project files and creates only several files (one or more)
+
+------------------
+
+component to redux store:
+1.import connect helper from react-redux
+2.define mapStateToProps function 
+3.now we can pull the state we need in the component
+---------------------
