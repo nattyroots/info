@@ -7,8 +7,12 @@ arrow functions:
     this keyword no longer bound with arrow functions, like: es5 function has its own this that he bounds,
     it means that anonimous function in object will get the this of the object and not of the function,
     this issue was workarounded with "that" variable before arrow functions
-
     arguments objec no longer bound wiht arrow functions (console.log(arguments) will not print all argumets as in es5)
+
+attributes in JSX:
+    calss is className because class is keyword to create class
+
+event handler:
 
 plugins to install : babel ES6 ES7
 
@@ -19,6 +23,10 @@ npm install -g : is for global, to run the installed as command
 we want react to render our application 
 
 React, ReactDom could be loaded via scrip tag... its just an javascript files..
+
+React uses virtual DOM to be efficient in rendering and re rendering, it does not really renders all the page all the time (the flash elements in chorme elements is the one who changes)
+so we can do the changes without worring about making the application slow 
+
 
 to compile the JSX to javascript you can run the command (after installing babel and the prisets)
     babel src/app.js --out-file=public/scripts/app.js --presets=env,react (--watch)
