@@ -1,2 +1,5 @@
-pk_test_aWh4tppYgtxz1z5UM3SnF3br00JubOdSY4
-sk_test_5Rrke2y7rTXBYYEflHTYQCA200gU25g50L
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react -watch
+
+live-server public/
+
+lsof -i -P -n | grep LISTEN 

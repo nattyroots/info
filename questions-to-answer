@@ -1,73 +1,84 @@
-var = redefine, reasign, function scoped
-let = reasign, cant redefine, function scoped, block level scoped
-const = cant reasign , cant redefine, function scope, block level scoped
+variable types:
+var = redefine, reassign, function scoped
+let = reassign, can't redefine, function scoped, block level scoped
+const = cannot reassign , can't redefine, function scope, block level scoped
 
 arrow functions: 
-    always unonimous
-    this keyword no longer bound with arrow functions, like: es5 function has its own this that he bounds,
-    it means that anonimous function in object will get the this of the object and not of the function,
-    this issue was workarounded with "that" variable before arrow functions
-    arguments objec no longer bound wiht arrow functions (console.log(arguments) will not print all argumets as in es5)
+ always anonymous
+ this keyword no longer bound with arrow functions, like: es5 function has its own this that he bounds,
+it means that anonymous function in object will get the this of the object and not of the function,
+this issue was workarounded with "that" variable before arrow functions
+arguments object no longer bound with arrow functions (console.log(arguments) will not print all arguments as in es5)
 
 attributes in JSX:
-    calss is className because class is keyword to create class
+    class is className because class is keyword to create class, there is a list of availible attributes in web
 
 event handler:
 
-plugins to install : babel ES6 ES7
+.plugins to install : babel ES6 ES7
 
-node_modules are different from os to os, so be sure to generate them on machine you work on
+.node_modules are different from os to os, so be sure to generate them on machine you work on
 
-npm install -g : is for global, to run the installed as command 
+.npm install -g : is for global, to run the installed as command 
 
-we want react to render our application 
+.we want react to render our application 
 
-React, ReactDom could be loaded via scrip tag... its just an javascript files..
+.React is all about components, we can create React Component for reusing same code, we will have a wrapper Component for app that contains all other components
 
-React uses virtual DOM to be efficient in rendering and re rendering, it does not really renders all the page all the time (the flash elements in chorme elements is the one who changes)
-so we can do the changes without worring about making the application slow 
+.React, ReactDom could be loaded via script tag... it's just a javascript files..
 
+.React uses virtual DOM to be efficient in rendering and rendering, it does not really renders all the page all the time (the flash elements in chrome elements is the one who changes)
+so we can do the changes without worrying about making the application slow 
 
-to compile the JSX to javascript you can run the command (after installing babel and the prisets)
-    babel src/app.js --out-file=public/scripts/app.js --presets=env,react (--watch)
+.ES6 Classes - 
+    with uppercase name, methods can be overided, can inherit from other class, has consturctor
+
+to compile the JSX to javascript you can run the command (after installing babel and the presets)
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react (--watch)
 
 .JSX
     answer:
     javascript xml, provided by react 
 
-. JSX is not understud by the browser, it should be translated to normal javascript,
-    bable does just this... babel is compailer, it translates JSX, ES7, ES6 to old ES5
+. JSX is not understood by the browser, it should be translated to normal javascript,
+    bable does just this... babel is compiler, it translates JSX, ES7, ES6 to old ES5
 
-. to work with JSX I will install babel localy
+. to work with JSX I will install babel locally
 
 ReactDom.render is the function that renders the react components:
 it gets the component to render and the root element, there it will be rendered
 
-JSX expressins :
+JSX expressions :
     javascript in JSX, use {javascript} (javascript in curly brackets)
 
+.look for React events in google, for example, if I use form then it will refresh all the page, 
+so I will use "e.preventDefault();" so the page will not be refreshed...
+
+.there is a difference between referensing function and calling function
+
+.calling function on event = > e.target.elements = get us all elements on the target (who called us), the elements are indexed by 'name'
 .when class and when function based component?
-   answer: class based components are state full, functional are state less components
+   answer: class based components are state full, functional are stateless components, class based components allow to access lifecycle methods of react, function based components does not
 
 .what is connect and mapStateToProps?
    answer:
 
-.uper case, lower case, what are the rules?
-   answer: if we export single function or some litle code snipet
-   when we will use low case for export, 
-   if we export class (commponent/model) it will be exported capital case 
+.uppercase, lower case (react/node js), what are the rules?
+   answer: if we export single function or some little code snippet
+   when we will use lowercase for export, 
+   if we export class (component/model) it will be exported capital case 
 
 .what is so different in middleware?
-   answer: middleware, inspects the incoming request, and can change it if its needed,
-   after this change the request is sent to the routs...
+   answer: middleware, inspects the incoming request, and can change it if it's needed,
+   after this change the request is sent to the routes...
 
 .default export / named export??
     answer: could be only one /default export
     it could be imported like: import a from "aa"
     named imports could be imported like : import {a} from "aa"
-    default export does need to be imported by name(nameing is not important)
+    default export does need to be imported by name(naming is not important)
     in named, the name is important
-    if file has one big main thing to export, it can be a default, and if the file is exporting many litle fucntions they can be the named exports
+    if file has one big main thing to export, it can be a default, and if the file is exporting many little functions they can be the named exports
 
 .describe components of Redux
    answer:
