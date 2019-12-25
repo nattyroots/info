@@ -10,6 +10,22 @@ it means that anonymous function in object will get the this of the object and n
 this issue was workarounded with "that" variable before arrow functions
 arguments object no longer bound with arrow functions (console.log(arguments) will not print all arguments as in es5)
 
+.this keyword will not work in some component class method:(this problen is not only for React components or es6)
+class Action extends React.component {
+    handle(){
+        console.log(this.somedata or some method)//this this will not work here
+    }
+
+    render(){
+        return(<div>{this.somedata or some method})//this this will work here
+    }
+}
+the issue is because of context,
+the context loosing is then using code like "const name = obj.someFunction" (not calling with () just getting the variable that contains the function)
+while doing this the context not transfered, like if you run obj.someFunction() the function will run in context of the obj, but if you do some like
+"const name = obj.someFunction" the context of the object not trnasfered to "name" and "name" is just an function!!
+ function does not have this, we can use bind() to fix the issue
+ 
 attributes in JSX:
     class is className because class is keyword to create class, there is a list of availible attributes in web
 
@@ -54,6 +70,8 @@ JSX expressions :
 .look for React events in google, for example, if I use form then it will refresh all the page, 
 so I will use "e.preventDefault();" so the page will not be refreshed...
 
+.props 
+    allows us to pass some data to the component, it lets us to make the component reusible 
 .there is a difference between referensing function and calling function
 
 .calling function on event = > e.target.elements = get us all elements on the target (who called us), the elements are indexed by 'name'
@@ -67,6 +85,7 @@ so I will use "e.preventDefault();" so the page will not be refreshed...
    answer: if we export single function or some little code snippet
    when we will use lowercase for export, 
    if we export class (component/model) it will be exported capital case 
+   in React, the React differentiates between html and React components with the case, so react components should be named with uppercase
 
 .what is so different in middleware?
    answer: middleware, inspects the incoming request, and can change it if it's needed,
