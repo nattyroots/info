@@ -23,9 +23,10 @@ class Action extends React.component {
 the issue is because of context,
 the context loosing is then using code like "const name = obj.someFunction" (not calling with () just getting the variable that contains the function)
 while doing this the context not transfered, like if you run obj.someFunction() the function will run in context of the obj, but if you do some like
-"const name = obj.someFunction" the context of the object not trnasfered to "name" and "name" is just an function!!
- function does not have this, we can use bind() to fix the issue
- 
+"const name = obj.someFunction" the context of the object not trnasfered to "name" and "name" is just an function!! and regular funciton has an "undifined" by default for "this" keyword
+function does not have this, we can use bind() to fix the issue
+it could be fixed by constructor use in React components, and it is much better, because the binding is performed only once
+
 attributes in JSX:
     class is className because class is keyword to create class, there is a list of availible attributes in web
 
