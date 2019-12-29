@@ -27,6 +27,12 @@ while doing this the context not transfered, like if you run obj.someFunction() 
 function does not have this, we can use bind() to fix the issue
 it could be fixed by constructor use in React components, and it is much better, because the binding is performed only once
 
+
+.state:
+    setup default state object
+    component rendered with default state values
+    state chnages based on some event automatically
+
 attributes in JSX:
     class is className because class is keyword to create class, there is a list of availible attributes in web
 
