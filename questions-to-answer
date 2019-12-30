@@ -27,7 +27,16 @@ while doing this the context not transfered, like if you run obj.someFunction() 
 function does not have this, we can use bind() to fix the issue
 it could be fixed by constructor use in React components, and it is much better, because the binding is performed only once
 
+.props vs state - 
+both are just objects
+both can be used when rendering
+changes to both rerenders 
+props - comes from above
+state - defined on the component its self
+props cant be changed by component 
+state can be changed by the component its self
 
+.e.preventDefault - is best to live in the component class, not in the general component ...
 .state:
     setup default state object
     component rendered with default state values
