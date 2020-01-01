@@ -68,6 +68,13 @@ so we can do the changes without worrying about making the application slow
 to compile the JSX to javascript you can run the command (after installing babel and the presets)
 babel src/app.js --out-file=public/scripts/app.js --presets=env,react (--watch)
 
+.stateless functional components, its a presentational components
+cant use state in them, can use props, witch is gotten as first parameter of the function,
+functional components are faster
+cant use lifecycle functions
+  
+.React sees lower case element name, its thinks about html tag, if uppercase element name provided, React searches for React component with that name
+
 .JSX
     answer:
     javascript xml, provided by react 
@@ -128,3 +135,44 @@ so I will use "e.preventDefault();" so the page will not be refreshed...
 
 .liveserver:
     simple server
+
+.Webpack general idea –
+Allows us to organize our JavaScript, so at the end of the day we get one js file (bundle) that contains everything that is needed  for our application to run, this means one script tag instead of many , which can slow down the web application (one request for one script file before the application runs)
+Webpack braking up all files in our application to islands and the file islands communicating between them with es6 import export syntax, and this means that we can break down the application to multiple files
+It makes the application more scalable
+Allows us to install third party dependencies from npm and yarn
+Makes the life easy to manage the dependencies
+Before Webpack:
+The client side did not do so much work as today, most of the work were performed in server side
+We have a public folder that contains everything the app needed (all the JS files, our JS and third-party JS)
+                                                               i.      For all this to run we should add script tags to load them , in correct order, because we rely on global namespace
+                                                             ii.      Its enoing to manage it
+                                                           iii.      We polluting the global namespace because we are adding stuff we not really need there
+After :
+We have 3 folders:
+                                                               i.      Public/ - for serving assets
+                                                             ii.      Src/ -  client side javascript
+                                                           iii.      Node_modules / -  third-party modules
+Now the dependencies are not global but in app.js
+After running the webpack we will get one file in public (bundle.js)
+It loads with script tag in index.html
+Webpack will run bable for us
+Good scalability , many little files
+ 
+Global modules – bad idea –
+Global modules are not listed in dependency list (package.json), so how should I know their are needed?
+When installing something globally this means that all projects will use the "something" in the same version, and while working on many projects it is not realistic
+all dependencies should be defined via package.json file
+whole command will be needed to be typed in terminal to use/ run global tools, so if the app should run at other computer it is needed to run the whole command with correct path
+ 
+to uninstall global modules:
+npm uninstall -g babel-cli live-server
+now install them not globally
+npm install live-server babel-cli
+now it is not possible to run the commands from terminal
+instead of running them on terminal we will need set them up as scripts in package.json
+ 
+"scripts":{
+  	"serve" : "live-server public/",
+  	"build": "babel src/app.js  --out-file=public/scripts/app.js –presets=env,react –watch"
+}
