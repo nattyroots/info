@@ -115,7 +115,7 @@ so I will use "e.preventDefault();" so the page will not be refreshed...
    after this change the request is sent to the routes...
 
 .default export / named export??
-    answer: could be only one /default export
+    answer: could be only one default export
     it could be imported like: import a from "aa"
     named imports could be imported like : import {a} from "aa"
     default export does need to be imported by name(naming is not important)

@@ -1,0 +1,28 @@
+.questions for redux:
+  where do I store my app state in a complex React app?
+  How do I create components that are actually reusable? \
+  (because if I pass props to components, its creates tight connection of props to component and it brakes reusibility)
+
+.what is redux 
+  it is just a state container
+
+.Three Principles
+  Single source of truth
+  State is read-only
+  Changes are made with pure functions
+
+.Actions
+  allow to change redux store
+  is an object that gets sent to the store
+  example:
+  {
+      type: 'INCREMENT' //has to have type
+  }
+.store.dispach function
+  gets the acctions to make change to the store
+
+.store.subscribe 
+  the function called everytime something changes in the state
+  we can unsubscribe too
+
+.I can add additional data to acction
