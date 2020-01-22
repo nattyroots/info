@@ -1,0 +1,11 @@
+a: why functional?
+.pure functions
+.idempotent
+.imperative vs declarative
+.immutabillity
+.higher order function
+.currying
+.partial application
+.memoization
+.compose and pipe
+.arity
