@@ -1,5 +1,6 @@
 a: why functional?
 .pure functions
+.referentially transparent
 .idempotent
 .imperative vs declarative
 .immutabillity
