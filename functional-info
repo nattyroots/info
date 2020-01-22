@@ -10,3 +10,4 @@ a: why functional?
 .memoization
 .compose and pipe
 .arity
+.Lazy Evaluation
